@@ -1,0 +1,34 @@
+ import React from 'react'
+
+ export interface Bookmark {
+    id?: string
+    title: string
+    description: string
+    url: string
+}
+
+ export interface BookmarksProps {
+  
+  handleModal: () => void;
+  handleUpdate: (bookmark:Bookmark) => void;
+
+}
+
+ export interface BookmarkItemProps {
+  
+  bookmark: Bookmark;
+  handleUpdate: (bookmark:Bookmark) => void;
+  
+}
+
+ export interface FormProps {
+  handleModal: () => void
+
+  open: boolean
+  
+  current: Bookmark | null
+
+  setCurrent: React.Dispatch<React.SetStateAction< Bookmark | null>>
+
+  updateBookmark: ( bookmark:Bookmark ) => void
+}
